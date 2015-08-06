@@ -1,0 +1,23 @@
+.slide-box {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.hd {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.6);
+    bottom: 20px;
+    border-radius: 5px;
+    left: 50%;
+    margin-left: -10px;
+}
+.hd li {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+.hd li.on {
+    background-color: #e46169;
+}
