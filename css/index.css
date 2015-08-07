@@ -1,23 +1,172 @@
+/*公共类*/
+.ib li {
+    display: inline-block;
+}
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
 .slide-box {
     position: absolute;
     left: 0;
     top: 0;
+    width: 100%;
+    height: 600px;
+}
+.hd-con {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    width: 100px;
+    text-align: center;
+    margin-left: -50px;
 }
 .hd {
-    position: absolute;
     background: rgba(255, 255, 255, 0.6);
-    bottom: 20px;
     border-radius: 5px;
-    left: 50%;
-    margin-left: -10px;
+    padding: 5px;
+    display: inline-block;
 }
 .hd li {
-    display: inline-block;
+    float: left;
     width: 10px;
     height: 10px;
     background-color: #fff;
     border-radius: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+.hd li:last-child {
+    margin-right: 0;
 }
 .hd li.on {
     background-color: #e46169;
+}
+.nav-box {
+    position: absolute;
+    top: 0;
+    width: 1000px;
+    left: 50%;
+    margin-left: -500px;
+}
+.nav-box nav {
+    margin-top: 15px;
+    clear: both;
+}
+.nav-box nav ul li a {
+    color: #c3c5c6;
+    font-size: 12px;
+}
+.nav-box nav ul li.help a {
+    color: #fff;
+}
+.search-con {
+    clear: both;
+    margin-top: 170px;
+}
+.search-con h1 {
+    text-align: center;
+    font-size: 40px;
+    color: #fff;
+}
+.search-tab li {
+    color: #fff;
+    font-size: 14px;
+    padding: 8px 30px;
+    cursor: pointer;
+}
+.search-tab .on {
+    background-color: #ff5a5f;
+}
+.search-box {
+    width: 520px;
+    margin: 30px auto 0;
+    font-size: 0;
+}
+.search-sort-con {
+    border: 2px solid #ff5a5f;
+    height: 40px;
+}
+.search-sort-con form {
+    height: 100%;
+}
+.search-sort-con .txt,
+.search-sort-con .btn {
+    height: 38px;
+    line-height: 38px;
+    display: inline-block;
+    width: 90%;
+    border: 0;
+    text-indent: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+.search-sort-con .btn {
+    width: 10%;
+    text-indent: 0;
+    background-color: #ff5a5f;
+}
+.hot-word {
+    margin-top: 15px;
+}
+.hot-word li {
+    margin-right: 15px;
+}
+/*主体结构*/
+.wrap {
+    width: 1000px;
+    margin: 620px auto 0;
+}
+.hot-country li {
+    float: left;
+    width: 184px;
+    height: 125px;
+    margin-right: 20px;
+    overflow: hidden;
+}
+
+.hot-country li a {
+    display: block;
+    padding: 35px 0;
+    text-align: center;
+    font-size: 24px;
+    color: #FFFFFF;
+    background: rgba(0, 0, 0, 0.28);
+    transition: all 400ms ease;
+}
+.hot-country li span {
+    display: block;
+    text-align: center;
+    font-size: 14px;
+}
+.hot-country .us {
+    background: url(../images/nav-us.jpg) no-repeat;
+}
+
+.hot-country .uk {
+    background: url(../images/nav-uk.jpg) no-repeat;
+}
+
+.hot-country .au {
+    background: url(../images/nav-au.jpg) no-repeat;
+}
+
+.hot-country .ca {
+    background: url(../images/nav-ca.jpg) no-repeat;
+}
+
+.hot-country .nz {
+    margin-right: 0;
+    background: url(../images/nav-nz.jpg) no-repeat;
+}
+.hot-country li:hover a {
+    opacity: 0;
+}
+.hot-word a {
+    color: #fff;
+    font-size: 12px;
+}
+.hot-word .hot a {
+    color: #f30;
 }
