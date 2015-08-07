@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>房屋出售</title>
+    <link href="css/index.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+    <div class="header">
+        <a href="#" class="logo"><img src="img/logo.png" alt="logo"/></a>
+        <div class="search">
+            <label>
+                <input type="text" placeholder="您要去哪里？（请输入城市或者学校名称）"/>
+            </label>
+            <input type="submit" value="搜索" id="search"/>
+        </div>
+        <ul class="user-login">
+            <li class="login">
+                <a href="#"></a>
+            </li>
+            <li class="register">
+                <a href="#"></a>
+            </li>
+            <li class="help">
+                <a href="#"></a>
+            </li>
+            <li class="lang">
+                <a href="#"></a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <form class="form" action="#" method="post">
+            <div class="need-type">
+                <span>需求类型</span>
+                <button>买房</button>
+                <button>租房</button>
+                <button>留学公寓</button>
+            </div>
+            <ul class="buy-house">
+                <li>
+                    <span>切换城市</span>
+                    <select name="choose" id="choose" title="城市">
+                        <option value="不限">不限</option>
+                    </select>
+                </li>
+
+                <li>
+                    <span>选择学校</span>
+                    <select title="学校性质" class="school">
+                        <option>性质</option>
+                    </select>
+
+                    <select title="学校类型" class="school-type">
+                        <option>类型</option>
+                    </select>
+                    <select title="学校名称" class="school-name">
+                        <option>名称</option>
+                    </select>
+                </li>
+
+                <li>
+                    <span>房屋类型</span>
+                    <select title="房屋类型">
+                        <option>不限</option>
+                    </select>
+                </li>
+
+                <li>
+                    <span>内部格局</span>
+                    <select title="内部格局" class="pattern">
+                        <option>卧室</option>
+                        <option>1间卧室</option>
+                        <option>2间卧室</option>
+                        <option>3间卧室</option>
+                        <option>4间卧室</option>
+                        <option>5间卧室</option>
+                        <option>6间卧室</option>
+                        <option>7间卧室</option>
+                        <option>8间卧室</option>
+                        <option>9间卧室</option>
+                        <option>10间卧室</option>
+                    </select>
+                    <select title="浴室" class="bathroom">
+                        <option>卫浴</option>
+                    </select>
+                </li>
+
+                <li>
+                    <span>房源属性</span>
+                    <select title="房源属性">
+                        <option>新房</option>
+                    </select>
+                </li>
+
+                <li>
+                    <span>产权类型</span>
+                    <select title="产权类型">
+                        <option>英国</option>
+                    </select>
+                </li>
+            </ul>
+
+            <ul class="rent">
+                <li>
+                    <span>切换城市</span>
+                    <select title="城市">
+                        <option>不限</option>
+                        <option>美国</option>
+                        <option>英国</option>
+                        <option>加拿大</option>
+                        <option>澳大利亚</option>
+                        <option>新西兰</option>
+                    </select>
+                </li>
+
+                <li>
+                    <span>选择学校</span>
+                    <select title="学校性质" class="school">
+                        <option>性质</option>
+                        <option>不限</option>
+                        <option>私立</option>
+                        <option>公立</option>
+                    </select>
+
+                    <select title="学校类型" class="school-type">
+                        <option>类型</option>
+                        <option>不限</option>
+                        <option>小学</option>
+                        <option>初中</option>
+                        <option>高中</option>
+                        <option>大学</option>
+                    </select>
+                    <select title="学校名称" class="school-name">
+                        <option>名称</option>
+                    </select>
+                </li>
+
+                <li>
+                    <span>房屋类型</span>
+                    <select title="房屋类型">
+                        <option>不限</option>
+                        <option>独栋别墅</option>
+                        <option>半独栋别墅</option>
+                        <option>联排别墅</option>
+                        <option>平层别墅</option>
+                        <option>联排房</option>
+                    </select>
+                </li>
+
+                <li>
+                    <span>内部格局</span>
+                    <select title="内部格局" class="pattern">
+                        <option>卧室</option>
+                        <option>卧室数量1</option>
+                        <option>卧室数量2</option>
+                        <option>卧室数量3</option>
+                        <option>卧室数量4</option>
+                        <option>卧室数量5</option>
+                        <option>卧室数量6</option>
+                    </select>
+                    <select title="浴室" class="bathroom">
+                        <option>卫浴</option>
+                        <option>卫浴数量1</option>
+                        <option>卫浴数量2</option>
+                        <option>卫浴数量3</option>
+                        <option>卫浴数量4</option>
+                        <option>卫浴数量5</option>
+                        <option>卫浴数量6</option>
+                    </select>
+                </li>
+
+                <li>
+                    <span>发布来源</span>
+                    <select title="房源属性">
+                        <option>经纪人/中介</option>
+                    </select>
+                </li>
+
+                <li>
+                    <span>出租类型</span>
+                    <select title="产权类型">
+                        <option>不限</option>
+                    </select>
+                </li>
+            </ul>
+
+            <ul class="student-apartment">
+                <li>
+                    <span>切换城市</span>
+                    <select title="城市">
+                        <option>不限</option>
+                        <option>美国</option>
+                        <option>英国</option>
+                        <option>加拿大</option>
+                        <option>澳大利亚</option>
+                        <option>新西兰</option>
+                    </select>
+                </li>
+
+                <li>
+                    <span>选择学校</span>
+                    <select title="学校性质" class="school">
+                        <option>性质</option>
+                        <option>不限</option>
+                        <option>私立</option>
+                        <option>公立</option>
+                    </select>
+
+                    <select title="学校类型" class="school-type">
+                        <option>类型</option>
+                        <option>不限</option>
+                        <option>小学</option>
+                        <option>初中</option>
+                        <option>高中</option>
+                        <option>大学</option>
+                    </select>
+                    <select title="学校名称" class="school-name">
+                        <option>名称</option>
+                    </select>
+                </li>
+
+                <li>
+                    <span>房屋类型</span>
+                    <select title="房屋类型">
+                        <option>不限</option>
+                        <option>独栋别墅</option>
+                        <option>半独栋别墅</option>
+                        <option>联排别墅</option>
+                        <option>平层别墅</option>
+                        <option>联排房</option>
+                    </select>
+                </li>
+
+                <li>
+                    <span>内部格局</span>
+                    <select title="内部格局" class="pattern">
+                        <option>卧室</option>
+                        <option>卧室数量1</option>
+                        <option>卧室数量2</option>
+                        <option>卧室数量3</option>
+                        <option>卧室数量4</option>
+                        <option>卧室数量5</option>
+                        <option>卧室数量6</option>
+                    </select>
+                    <select title="浴室" class="bathroom">
+                        <option>卫浴</option>
+                        <option>卫浴数量1</option>
+                        <option>卫浴数量2</option>
+                        <option>卫浴数量3</option>
+                        <option>卫浴数量4</option>
+                        <option>卫浴数量5</option>
+                        <option>卫浴数量6</option>
+                    </select>
+                </li>
+
+                <li>
+                    <span>发布来源</span>
+                    <select title="房源属性">
+                        <option>经纪人/中介</option>
+                    </select>
+                </li>
+
+                <li>
+                    <span>出租类型</span>
+                    <select title="产权类型">
+                        <option>不限</option>
+                    </select>
+                </li>
+            </ul>
+
+
+            <div class="price-range">
+                <span>价格区间</span>
+                <input type="range" value="range" title="100">
+                <div class="range-price">
+                    <span class="left">&yen;61</span>
+                    <span class="right">&yen;5000+</span>
+                </div>
+                <div class="need-type center">
+                    <button>取消</button>
+                    <button>确认</button>
+                </div>
+            </div>
+        </form>
+        <div class="detail">
+            <div class="order">
+                <button>默认排序</button>
+                <select title="price-order">
+                    <option>金额从高到低</option>
+                    <option>金额从低到高</option>
+                </select>
+                <button>距目标学校距离</button>
+                <div class="pages">
+                    <a href="#" class="prev">&lt;</a>
+                    <span class="current">2</span>
+                    <span>/100</span>
+                    <a href="#" class="next">&gt;</a>
+                </div>
+            </div>
+
+            <ul class="houses-detail">
+                <li>
+                    <a>
+                        <div class="house-pro">
+                            <img src="img/img.jpg" class="big-img"/>
+                            <span class="dollar">&yen;650</span>
+                            <img src="img/title.jpg" class="title">
+                            <p>Room in Manhattan, private bathroom </p>
+                            <p>独栋别墅 <span>1</span>卧室 <span>1</span>卫生间 <span>1</span>车位</p>
+                        </div>
+
+                    </a>
+                </li>
+
+                <li>
+                    <a>
+                        <div class="house-pro">
+                            <img src="img/img.jpg" class="big-img"/>
+                            <span class="dollar">&yen;650</span>
+                            <img src="img/title.jpg" class="title">
+                            <p>Room in Manhattan, private bathroom </p>
+                            <p>独栋别墅 <span>1</span>卧室 <span>1</span>卫生间 <span>1</span>车位</p>
+                        </div>
+
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <div class="house-pro">
+                            <img src="img/img.jpg" class="big-img"/>
+                            <span class="dollar">&yen;650</span>
+                            <img src="img/title.jpg" class="title">
+                            <p>Room in Manhattan, private bathroom </p>
+                            <p>独栋别墅 <span>1</span>卧室 <span>1</span>卫生间 <span>1</span>车位</p>
+                        </div>
+
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <div class="house-pro">
+                            <img src="img/img.jpg" class="big-img"/>
+                            <span class="dollar">&yen;650</span>
+                            <img src="img/title.jpg" class="title">
+                            <p>Room in Manhattan, private bathroom </p>
+                            <p>独栋别墅 <span>1</span>卧室 <span>1</span>卫生间 <span>1</span>车位</p>
+                        </div>
+
+                    </a>
+                </li>
+            </ul>
+            <div class="footer">
+            <button>上一页</button>
+            <ul>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+            </ul>
+            <button>下一页</button>
+        </div>
+        </div>
+    </div>
+
+    <div class="map">
+        <img src="img/img.jpg"/>
+    </div>
+
+    <div class="footer-index">
+        <a><img src="img/footer.jpg"/></a>
+        <a><img src="img/footer.jpg"/></a>
+    </div>
+</body>
+</html>
