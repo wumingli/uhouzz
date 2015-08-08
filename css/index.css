@@ -8,6 +8,10 @@
 .fr {
     float: right;
 }
+/*共用图标的样式*/
+.nav-box nav ul li a:before {
+    background: transparent url(../images/icons.png) no-repeat;
+}
 .slide-box {
     position: absolute;
     left: 0;
@@ -59,8 +63,41 @@
     color: #c3c5c6;
     font-size: 12px;
 }
-.nav-box nav ul li.help a {
+.nav-box nav ul li {
+    margin-right: 10px;
+}
+.nav-box nav ul li a:hover {
     color: #fff;
+}
+.nav-box nav ul li a:before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.nav-box nav ul li.reg a:before {
+    background-position: 0 -24px;
+}
+.nav-box nav ul li.login a:hover:before {
+    background-position: -24px 0;
+}
+.nav-box nav ul li.reg a:hover:before {
+    background-position: -24px -24px;
+}
+.nav-box nav ul li.help a:before {
+    background-position: 0 -48px;
+}
+.nav-box nav ul li.help a:hover:before {
+    background-position: -24px -48px;
+}
+.nav-box nav ul li.lan a:before {
+    background-position: 0 -72px;
+}
+
+.nav-box nav ul li.lan a:hover:before {
+    background-position: -24px -72px;
 }
 .search-con {
     clear: both;
@@ -78,7 +115,7 @@
     cursor: pointer;
 }
 .search-tab .on {
-    background-color: #ff5a5f;
+    background-color: rgba(255, 90, 95, 0.7);
 }
 .search-box {
     width: 520px;
@@ -87,7 +124,7 @@
 }
 .search-sort-con {
     border: 2px solid #ff5a5f;
-    height: 40px;
+    height: 38px;
 }
 .search-sort-con form {
     height: 100%;
@@ -97,15 +134,20 @@
     height: 38px;
     line-height: 38px;
     display: inline-block;
-    width: 90%;
+    width: 426px;
     border: 0;
     text-indent: 10px;
     background-color: rgba(255, 255, 255, 0.7);
+    padding: 0;
+    vertical-align: middle;
 }
 .search-sort-con .btn {
-    width: 10%;
+    width: 90px;
     text-indent: 0;
     background-color: #ff5a5f;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
 }
 .hot-word {
     margin-top: 15px;
