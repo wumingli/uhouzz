@@ -1,3 +1,6 @@
+body {
+    background-color: #fafafa;
+}
 /*公共类*/
 .ib li {
     display: inline-block;
@@ -9,7 +12,10 @@
     float: right;
 }
 /*共用图标的样式*/
-.nav-box nav ul li a:before {
+.nav-box nav ul li a:before,
+.nav-box .prev,
+.nav-box .next,
+footer .im li a {
     background: transparent url(../images/icons.png) no-repeat;
 }
 .slide-box {
@@ -52,8 +58,30 @@
     position: absolute;
     top: 0;
     width: 1000px;
+    height: 100%;
     left: 50%;
     margin-left: -500px;
+}
+.nav-box .prev,
+.nav-box .next {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    width: 16px;
+    height: 30px;
+    background-position: 0 -217px;
+    cursor: pointer;
+}
+.nav-box .prev:hover {
+    background-position: 0 -247px;
+}
+.nav-box .next:hover {
+    background-position: -16px -247px;
+}
+.nav-box .next {
+    left: auto;
+    right: 20px;
+    background-position: -16px -217px;
 }
 .nav-box nav {
     margin-top: 15px;
@@ -155,12 +183,23 @@
 .hot-word li {
     margin-right: 15px;
 }
+.hot-word a {
+    color: #fff;
+    font-size: 12px;
+}
+.hot-word .hot a {
+    color: #ff5a5f;
+    font-weight: 700;
+}
 /*主体结构*/
 .wrap {
     width: 1000px;
     margin: 620px auto 0;
 }
-.hot-country li {
+.hot-image {
+    overflow: hidden;
+}
+.hot-image li {
     float: left;
     width: 184px;
     height: 125px;
@@ -168,47 +207,460 @@
     overflow: hidden;
 }
 
-.hot-country li a {
+.hot-image li a {
     display: block;
     padding: 35px 0;
     text-align: center;
     font-size: 24px;
     color: #FFFFFF;
-    background: rgba(0, 0, 0, 0.28);
+    background-color: rgba(0, 0, 0, 0.28);
+    -webkit-transition: all 400ms ease;
     transition: all 400ms ease;
 }
-.hot-country li span {
+.hot-image li span {
     display: block;
     text-align: center;
     font-size: 14px;
 }
-.hot-country .us {
+.hot-image .us {
     background: url(../images/nav-us.jpg) no-repeat;
 }
 
-.hot-country .uk {
+.hot-image .uk {
     background: url(../images/nav-uk.jpg) no-repeat;
 }
 
-.hot-country .au {
+.hot-image .au {
     background: url(../images/nav-au.jpg) no-repeat;
 }
 
-.hot-country .ca {
+.hot-image .ca {
     background: url(../images/nav-ca.jpg) no-repeat;
 }
-
-.hot-country .nz {
+.hot-image .nz {
     margin-right: 0;
     background: url(../images/nav-nz.jpg) no-repeat;
 }
-.hot-country li:hover a {
+.hot-image li:hover a {
     opacity: 0;
 }
-.hot-word a {
+.country-list {
+    overflow: hidden;
+    clear: both;
+}
+.city-college {
+    text-align: center;
+    color: #666;
+}
+.net-sys h2,
+.city-college h2,
+.app-wrap h2 {
+    font-size: 30px;
+    line-height: 30px;
+    margin: 50px 0 20px;
+}
+.net-sys h5,
+.city-college h5,
+.app-wrap h5 {
+    font-size: 16px;
+    line-height: 16px;
+    margin-bottom: 20px;
+}
+.city-college .tab {
+    font-size: 0;
+    border: 1px solid #ff5a5f;
+    width: 180px;
+    margin: 0 auto;
+    border-radius: 2px;
+}
+.city-college .tab li {
+    width: 90px;
+    height: 28px;
+    line-height: 28px;
+    font-size: 12px;
+    cursor: pointer;
+}
+.city-college .tab li.on {
+    background-color: #ff5a5f;
     color: #fff;
+}
+.city-college .hot-image li {
+    height: 240px;
+    width: 260px;
+    margin-top: 20px;
+}
+.city-college .hot-image li.yale,
+.city-college .hot-image li.westminste {
+    background: url(../images/yale.jpg) no-repeat;
+    width: 440px;
+}
+.city-college .hot-image li.westminste {
+    background: url(../images/westminste.jpg) no-repeat;
+    width: 440px;
+    width: 440px;
+}
+.city-college .hot-image li.oxford,
+.city-college .hot-image li.harvard {
+    background: url(../images/oxford.jpg) no-repeat;
+    margin-right: 0;
+}
+.city-college .hot-image li.harvard {
+    background: url(../images/harvard.jpg) no-repeat;
+}
+.city-college .hot-image li.chicago {
+    background: url(../images/chicago.jpg) no-repeat;
+}
+.city-college .hot-image li.cambridge {
+    background: url(../images/cambridge.jpg) no-repeat;
+}
+.city-college .hot-image li a {
+    height: 100%;
+    padding-top: 90px;
+}
+/*如何使用*/
+.how-to-use {
+    overflow: hidden;
+}
+.how-to-use ul {
+    *zoom: 1;
+}
+
+.how-to-use ul:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.how-to-use li {
+    float: left;
+    width: 320px;
+    height: 440px;
+    padding-top: 30px;
+    margin-right: 20px;
+    border-radius: 4px;
+    background: #fff;
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+.how-to-use li h3 {
+    padding: 24px 0;
+    font-size: 16px;
+    font-weight: 700;
+}
+.how-to-use li p {
+    margin: 0 16px;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: left;
+}
+.how-to-use .step1 .banner {
+    background: url(../images/icon-use1.png) no-repeat center;
+}
+
+.how-to-use .step2 .banner {
+    background: url(../images/icon-use2.png) no-repeat center;
+    margin-top: 24px;
+}
+
+.how-to-use .step2 h3 {
+    padding-top: 0;
+}
+
+.how-to-use .step3 {
+    margin-right: 0;
+}
+
+.how-to-use .step3 .banner {
+    background: url(../images/icon-use3.png) no-repeat center;
+}
+
+.how-to-use .banner {
+    height: 240px;
+}
+.net-sys {
+    height: 360px;
+    padding-top: 80px;
+    margin-top: 50px;
+    text-align: center;
+    color: #fff;
+    background: url(../images/sh-bg.jpg) no-repeat center;
+}
+.net-sys h5 {
+    margin-bottom: 35px;
+}
+.net-sys ul li {
+    vertical-align: top;
+    margin-top: 20px;
+    font-size: 0;
+    margin-right: 30px;
+}
+.net-sys ul li p {
+    margin-top: 10px;
+}
+.net-sys ul li:last-child {
+    margin-right: 0;
+}
+.net-sys ul li.wechat {
+    margin-top: 0;
+}
+.net-sys ul li img {
+    border-radius: 50%;
+}
+.net-sys ul li.wechat img {
+    border-radius: 0;
+}
+.net-sys ul li a {
+    color: #fff;
+    font-size: 14px;
+}
+.app-wrap {
+    text-align: center;
+    color: #666;
+    background-color: #fff;
+    overflow: hidden;
+    padding-bottom: 50px;
+}
+.app-wrap ul li {
+    vertical-align: top;
+}
+.app-wrap ul li.phone {
+    padding-right: 40px;
+}
+.app-wrap ul li.info {
+    padding: 90px 0 0 40px;
+}
+.app-wrap ul li.info img {
+    margin-bottom: 40px;
+}
+.app-wrap ul li.info img:first-child {
+    margin-right: 20px;
+}
+.app-wrap ul li.info p {
+    font-size: 14px;
+}
+footer {
+    text-align: center;
+    background-color: #2a2d2d;
+    color: #666;
+    font-size: 14px;
+    overflow: hidden;
+}
+footer a {
+    color: #666;
+}
+footer a:hover {
+    color: #fff;
+}
+footer .sub-nav {
+    margin: 50px 0 15px;
+    font-size: 0;
+}
+footer .sub-nav li {
+    margin-right: 15px;
     font-size: 12px;
 }
-.hot-word .hot a {
-    color: #f30;
+footer .im {
+    margin-bottom: 20px;
+    height: 30px;
+}
+footer .im li {
+    margin-right: 50px;
+    position: relative;
+}
+footer .im li:last-child {
+    margin-right: 0;
+}
+footer .im li a {
+    display: block;
+    width: 30px;
+    height: 30px;
+    text-indent: -100px;
+    overflow: hidden;
+    background-position: 0 -96px;
+}
+footer .im li a:hover {
+    background-position: -30px -96px;
+}
+footer .im li.sina a {
+    background-position: 0 -126px;
+}
+footer .im li.sina a:hover {
+    background-position: -30px -126px;
+}
+footer .im li.fb a {
+    background-position: 0 -156px;
+}
+footer .im li.fb a:hover {
+    background-position: -30px -156px;
+}
+footer .im li.tw a {
+    background-position: 0 -186px;
+}
+footer .im li.tw a:hover {
+    background-position: -30px -186px;
+}
+footer .im .wechat-con .wechat {
+    width: 145px;
+    height: 140px;
+    background: url(../images/footer-wechat.png) no-repeat;
+    position: absolute;
+    left: -150px;
+    top: -55px;
+    display: none;
+}
+footer .im .wechat-con:hover .wechat {
+    display: block;
+}
+.website li {
+    background: url(../images/websites.png) no-repeat;
+    width: 105px;
+    height: 35px;
+    margin: 20px 15px 50px 0;
+}
+.website li.ba {
+    background-position:  0 -35px;
+}
+.website li.cx {
+    margin-right: 0;
+    background-position: 0 -70px;
+}
+.website li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-indent: -1000px;
+    overflow: hidden;
+}
+.tab-container {
+    display: none;
+}
+.tab-container.active {
+    display: block;
+}
+/*弹窗*/
+.cover {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .7);
+    display: none;
+}
+.cover .container {
+    width: 450px;
+    position: absolute;
+    left: 50%;
+    top: 160px;
+    margin-left: -225px;
+    background-color: #fff;
+    text-align: center;
+    color: #626262;
+    border-radius: 5px;
+}
+.cover .container h3 {
+    height: 50px;
+    line-height: 50px;
+    font-size: 20px;
+    color: #999;
+    background-color: #e8e8e8;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.cover .container h2 {
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+.cover .container h2:before {
+    content: "";
+    display: block;
+    width: 74px;
+    height: 88px;
+    background: url(../images/logo-red.png) no-repeat;
+    margin: 40px auto 22px;
+}
+.cover .container .ipt {
+    width: 398px;
+    height: 43px;
+    line-height: 43px;
+    text-indent: 5px;
+    border: 1px solid #e8e8e8;
+    border-radius: 5px;
+}
+.cover .container .ipt:focus {
+    border-color: #999;
+}
+.cover .container ul li {
+    padding-bottom: 25px;
+    font-size: 14px;
+}
+.auto-ck {
+    float: left;
+    margin-left: 25px;
+    font-size: 12px;
+    color: #666;
+}
+.forgot {
+    float: right;
+    margin-right: 20px;
+    font-size: 12px;
+    color: #fd5c63;
+}
+.red-btn {
+    display: inline-block;
+    width: 400px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 20px;
+    border: 0;
+    background-color: #ff5a5f;
+    color: #fff;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+.reg-link {
+    color: #666;
+    font-size: 14px;
+}
+.or {
+    border-top: 2px solid #e8e8e8;
+    width: 205px;
+    margin: 0 auto 5px;
+    text-align: center;
+    height: 10px;
+}
+.or span {
+    display: inline-block;
+    position: relative;
+    top: -12px;
+    background-color: #fff;
+    padding: 0 24px;
+    color: #ccc;
+    font-size: 30px;
+    line-height: 20px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+.cover .im a {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    text-indent: -1000px;
+    overflow: hidden;
+    margin-right: 60px;
+    background: url(../images/cover-btns.png) no-repeat;
+}
+.cover .im a.fb {
+    margin-right: 0;
+    background-position: -60px 0;
+}
+.auto-ck:before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url(../images/cover-ckbox.png) no-repeat;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.auto-ck.no-check:before {
+    background-position: -20px 0;
 }
